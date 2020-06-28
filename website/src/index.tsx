@@ -1,22 +1,16 @@
-import React, { useState } from 'react'
-import ReactDOM from 'react-dom'
-import { Button } from 'antd'
-import 'styl/comm.less'
-import 'antd/dist/antd.less'
-
-const Counter = () => {
-	const [count, setCount] = useState(0)
-	const handleClick = () => {
-		setCount(count + 1)
-	}
+import React from 'react'
+import { render } from 'react-dom'
+import { Provider, observer } from 'mobx-react'
+import appStore from './mobx/store'
+import Routes from './router'
+const App = observer(() => {
 	return (
 		<div>
-			<Button type="primary" onClick={handleClick}>
-				点我hooks写法递增
-			</Button>
-			<p>{count}</p>
+			<Provider store={appStore}>
+				<Routes />
+			</Provider>
 		</div>
 	)
-}
+})
 
-ReactDOM.render(<Counter />, document.getElementById('root'))
+render(<App />, document.getElementById('root'))
