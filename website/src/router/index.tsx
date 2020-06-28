@@ -1,13 +1,13 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
-import Login from '../views/login'
+import Home from '../views/home'
 
 const Routes = () => {
 	return (
 		<Router>
 			<Switch>
-				<Route path="/" exact component={Login}></Route>
+				<Route path="/" exact component={Home}></Route>
 			</Switch>
 		</Router>
 	)

@@ -1,0 +1,38 @@
+.blog-home {
+	.ant-layout {
+		height: 100%;
+    min-height: 100vh;
+  }
+  .ant-layout.ant-layout-has-sider{
+    padding-top: 64px;
+  }
+	.header {
+		position: fixed;
+		z-index: 1;
+		width: 100%;
+    color: #fff;
+		overflow: hidden;
+		font-size: 20px;
+		color: cyan;
+		.logo {
+			width: 120px;
+			float: left;
+		}
+		.blog-title {
+			animation: fade 0.5s linear infinite;
+			text-align: center;
+			margin-right: 120px;
+		}
+	}
+}
+@keyframes fade {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 1;
+	}
+}

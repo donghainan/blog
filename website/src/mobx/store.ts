@@ -1,14 +1,6 @@
-import { observable, computed, action } from 'mobx'
-class AppStore {
-  @observable count = 0
-  @computed get currentCount() {
-    return this.count + 5
-  }
-	@action increment() {
-		this.count++
-	}
+import user from './user'
+const AppStore = {
+  user,
 }
 
-const store = new AppStore()
-
-export default store
+export default AppStore
